@@ -1,25 +1,33 @@
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
-import Gallery from '@/components/Gallery';
-import Header from '@/components/Header';
+import AnnouncementBar from '@/components/AnnouncementBar';
+import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import Services from '@/components/Services';
+import About from '@/components/About';
+import Gallery from '@/components/Gallery';
 import Offers from '@/components/Offers';
-import ServiceMenu from '@/components/ServiceMenu';
-import Testimonials from '@/components/Testimonials';
-import WhyChooseUs from '@/components/WhyChooseUs';
+import ContactSection from '@/components/ContactSection';
+import BookingCTA from '@/components/BookingCTA';
+import BrandLogos from '@/components/BrandLogos';
+import FAQ from '@/components/FAQ';
+import Footer from '@/components/Footer';
+import WhatsAppPanel from '@/components/WhatsAppPanel';
 
 export default function HomePage() {
   return (
-    <main className="bg-ink text-ivory">
-      <Header />
+    <main className="bg-ink text-ivory overflow-x-hidden">
+      <AnnouncementBar />
+      <Navbar />
       <Hero />
-      <WhyChooseUs />
-      <ServiceMenu />
+      <Services />
+      <About />
       <Gallery />
-      <Testimonials />
       <Offers />
       <ContactSection />
+      <BookingCTA />
+      <BrandLogos />
+      <FAQ />
       <Footer />
+      <WhatsAppPanel />
     </main>
   );
 }

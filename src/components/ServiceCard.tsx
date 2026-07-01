@@ -11,7 +11,7 @@ export default function ServiceCard({ title, price, category, image }: ServiceCa
   return (
     <article className="group overflow-hidden rounded-[32px] border border-white/10 bg-[#0c0b09] shadow-[0_30px_90px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 hover:border-gold/30">
       <div className="relative h-72 overflow-hidden">
-        <Image src={image} alt={title} fill className="object-cover transition duration-500 group-hover:scale-105" />
+        <Image src={image} alt={title} fill className="object-cover transition duration-500 group-hover:scale-105 filter grayscale contrast-125 brightness-95" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         <span className="absolute left-5 top-5 rounded-full bg-black/70 px-4 py-2 text-xs uppercase tracking-[0.35em] text-gold backdrop-blur-sm">
           {category}

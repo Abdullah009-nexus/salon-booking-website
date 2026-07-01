@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { whyImages } from '@/lib/content';
 
 export default function WhyChooseUs() {
   return (
@@ -28,20 +29,10 @@ export default function WhyChooseUs() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="relative h-72 overflow-hidden rounded-[32px] border border-white/10 bg-black/10">
-              <Image
-                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
-                alt="Barber studio interior"
-                fill
-                className="object-cover"
-              />
+              <Image src={whyImages[0]} alt="Barber studio interior" fill className="object-cover filter grayscale contrast-125 brightness-95" />
             </div>
             <div className="relative h-72 overflow-hidden rounded-[32px] border border-white/10 bg-black/10">
-              <Image
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80"
-                alt="Barber finishing a haircut"
-                fill
-                className="object-cover"
-              />
+              <Image src={whyImages[1]} alt="Barber finishing a haircut" fill className="object-cover filter grayscale contrast-125 brightness-95" />
             </div>
           </div>
         </div>

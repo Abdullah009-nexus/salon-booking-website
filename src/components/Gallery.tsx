@@ -20,9 +20,9 @@ export default function Gallery() {
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={600}
-                height={700}
-                className="h-full w-full object-cover transition duration-300 hover:scale-105"
+                width={900}
+                height={900}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105 filter grayscale contrast-125 brightness-95"
               />
             </div>
           ))}

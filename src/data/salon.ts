@@ -1,0 +1,18 @@
+export const salon = {
+  name: 'Glamour Saloon',
+  tagline: "Bahria Town's home of haircuts, beard craft & grooming — one studio, one exacting standard.",
+  location: 'Malik Heights, 82 Plaza, Civic Center, Bahria Town Phase 4, Rawalpindi',
+  landmark: 'Near Manjoo Restaurant',
+  hours: 'Monday – Saturday · 10:00 AM – 9:00 PM',
+  hoursSun: 'Sundays by appointment only',
+  phone: '+92 300 0000000',
+  phone2: '+92 51 000 0000',
+  whatsapp: '923000000000',
+  email: 'info@glamoursaloon.pk',
+  instagram: 'glamoursaloon',
+  facebook: 'glamoursalonbahria',
+  mapsUrl: 'https://maps.app.goo.gl/4WqNhSRX6VNE82DM7',
+  rating: '4.8',
+  years: '8+',
+  studioCount: '1',
+} as const;
