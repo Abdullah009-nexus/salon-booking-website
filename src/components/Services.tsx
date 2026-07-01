@@ -18,7 +18,7 @@ export default function Services() {
             <p className="section-eye">For the Modern Gentleman</p>
             <h2 className="section-h2">Signature men's services</h2>
             <p className="mt-6 max-w-2xl text-sm leading-7 text-subtle">
-              A barbering-first studio — sharp cuts, beard craft and grooming in Bahria Town.
+              A barbering-first studio with sharp cuts, beard craft and grooming in Bahria Town.
             </p>
             <a href="#services" className="mt-8 inline-flex text-sm uppercase tracking-[2px] text-white/70 transition hover:text-white">
               View the Menu →
@@ -27,7 +27,7 @@ export default function Services() {
 
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {featuredServices.map((service) => (
-              <ServiceCard key={service.name} title={service.name} price={service.price} category={service.description} image="https://images.unsplash.com/photo-1598454448462-273ac0f2400e?auto=format&fit=crop&w=1200&q=80" />
+              <ServiceCard key={service.name} title={service.name} price={service.price} category={service.description} image="/gallery2.webp" />
             ))}
           </div>
         </div>

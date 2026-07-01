@@ -21,9 +21,13 @@ export const metadata: Metadata = {
     "Glamour Saloon is Bahria Town Phase 4's destination for precision haircuts, beard craft, keratin treatments and grooming packages — one studio, one exacting standard.",
   keywords: ['glamour saloon', 'men salon bahria town rawalpindi', 'haircut bahria town', 'beard trim rawalpindi', 'keratin rawalpindi'],
   themeColor: '#0c0c0c',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
   openGraph: {
     title: 'Glamour Saloon — Men\'s Grooming · Bahria Town Phase 4',
-    description: 'Precision haircuts, beard craft & grooming — one exacting standard.',
+    description: 'Precision haircuts, beard craft & grooming one exacting standard.',
     url: 'https://glamoursaloon.pk',
     siteName: 'Glamour Saloon',
     locale: 'en_PK',

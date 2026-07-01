@@ -36,6 +36,19 @@ body {
   background: rgba(201, 169, 110, 0.25);
 }
 
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 20s linear infinite;
+}
+
 .section-eye {
   @apply text-[10px] tracking-[4px] uppercase text-muted font-sans;
 }

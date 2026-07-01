@@ -17,7 +17,7 @@ export const faqs = [
   },
   {
     q: 'Which products do you use?',
-    a: 'We use professional products including L'Oréal, Keune, Dermacos, Cuteplus, Hi Left and Johnson. Mention any sensitivities when booking and we will adapt.',
+    a: "We use professional products including L'Oreal, Keune, Dermacos, Cuteplus, Hi Left and Johnson. Mention any sensitivities when booking and we will adapt.",
   },
   {
     q: 'Where exactly are you located?',

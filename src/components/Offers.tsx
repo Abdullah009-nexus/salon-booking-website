@@ -1,5 +1,4 @@
 import { offers } from '@/data/offers';
-import { salon } from '@/data/salon';
 
 /**
  * Offers shows promotional cards on a dark background.

@@ -31,10 +31,10 @@ export const serviceMenu = [
     id: '03',
     category: 'Hair Colour & Beard Colour',
     items: [
-      { name: "L'Oréal Hair Colour", price: 'Rs. 3,000', desc: 'Full-head colour with L'Oréal professional range.' },
+      { name: 'L\'Oreal Hair Colour', price: 'Rs. 3,000', desc: "Full-head colour with L'Oreal professional range." },
       { name: 'Keune Hair Colour', price: 'Rs. 2,500', desc: 'Rich, lasting colour with Keune products.' },
       { name: 'Just For Man Hair Colour', price: 'Rs. 3,000', desc: 'Natural-looking grey coverage.' },
-      { name: "L'Oréal Beard Colour", price: 'Rs. 1,500', desc: 'Professional beard colour for a polished finish.' },
+      { name: 'L\'Oreal Beard Colour', price: 'Rs. 1,500', desc: 'Professional beard colour for a polished finish.' },
       { name: 'Keune Beard Colour', price: 'Rs. 1,200', desc: 'Vibrant, consistent colour with Keune.' },
       { name: 'Just For Man Beard Colour', price: 'Rs. 1,500', desc: 'Easy, natural grey coverage for the beard.' },
     ],

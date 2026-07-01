@@ -15,9 +15,18 @@ export default function Footer() {
             </div>
             <p className="text-sm leading-7 text-subtle">{salon.location}, Pakistan</p>
             <p className="text-sm leading-7 text-subtle">Call Us: {salon.phone}</p>
-            <p className="text-sm leading-7 text-subtle">WhatsApp: {salon.phone}</p>
-            <p className="text-sm leading-7 text-subtle">Email: {salon.email}</p>
-            <p className="text-sm leading-7 text-subtle">Instagram: @{salon.instagram}</p>
+            <p className="text-sm leading-7 text-subtle">WhatsApp: +92 300 0000000</p>
+            <a href={`mailto:${salon.email}`} className="block text-sm leading-7 text-subtle transition hover:text-white">
+              Email: {salon.email}
+            </a>
+            <a
+              href={`https://instagram.com/${salon.instagram}`}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="block text-sm leading-7 text-subtle transition hover:text-white"
+            >
+              Instagram: @{salon.instagram}
+            </a>
           </div>
 
           <div>
