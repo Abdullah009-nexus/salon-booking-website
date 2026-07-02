@@ -1,8 +1,8 @@
 export const featuredServices = [
-  { name: 'Signature Haircut', price: 'Rs. 1,500', description: 'A sharp, tailored cut finished to perfection.' },
-  { name: 'Beard & Reshaping', price: 'Rs. 500', description: 'Precision shaping and lineup for a clean finish.' },
-  { name: "Gentleman Shave", price: 'Rs. 500', description: 'A classic, smooth shave for a clean, polished look.' },
-  { name: "Men's Hair Colour", price: 'from Rs. 2,500', description: 'Full-head colour, glossing and grey blending.' },
+  { name: 'Signature Haircut', price: 'Rs. 1,500', description: 'A sharp, tailored cut finished to perfection.', image: '/barber-cut.webp' },
+  { name: 'Beard & Reshaping', price: 'Rs. 500', description: 'Precision shaping and lineup for a clean finish.', image: '/beard-reshaping.jpg' },
+  { name: 'Gentleman Shave', price: 'Rs. 500', description: 'A classic, smooth shave for a clean, polished look.', image: '/Gentelman Shave.jpg' },
+  { name: "Men's Hair Colour", price: 'from Rs. 2,500', description: 'Full-head colour, glossing and grey blending.', image: '/mens-hair-color.jpg' },
 ];
 
 export const serviceMenu = [

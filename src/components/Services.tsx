@@ -26,18 +26,15 @@ export default function Services() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-            {featuredServices.map((service, index) => {
-              const featuredImages = ['/barber-cut.webp', '/beard-grooming.jfif', '/curly-style.webp', '/studio-view.png'];
-              return (
-                <ServiceCard
-                  key={service.name}
-                  title={service.name}
-                  price={service.price}
-                  category={service.description}
-                  image={featuredImages[index] ?? '/glamour_saloon_icon.jpg'}
-                />
-              );
-            })}
+            {featuredServices.map((service) => (
+              <ServiceCard
+                key={service.name}
+                title={service.name}
+                price={service.price}
+                category={service.description}
+                image={service.image}
+              />
+            ))}
           </div>
         </div>
 
