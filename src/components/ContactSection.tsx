@@ -42,7 +42,6 @@ export default function ContactSection() {
                   <div>
                     <p className="text-[11px] uppercase tracking-[3px] text-white/70">Call</p>
                     <p className="mt-2 text-white">{salon.phone}</p>
-                    <p className="text-white">{salon.phone2}</p>
                   </div>
                 </div>
               </div>
