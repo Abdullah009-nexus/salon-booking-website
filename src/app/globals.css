@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* =========================
-   DESIGN TOKENS (KEEP SAFE)
-========================= */
+/* ===== ROOT VARIABLES ===== */
 :root {
-  color-scheme: dark;
-
   --bg: #0c0c0c;
   --text: #f5f1eb;
   --muted: #888888;
@@ -19,9 +15,7 @@
   --font-sans: system-ui, sans-serif;
 }
 
-/* =========================
-   GLOBAL BASE STYLES
-========================= */
+/* ===== GLOBAL STYLES ===== */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
@@ -30,25 +24,20 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #0c0c0c;
-  color: #f5f1eb;
+  background-color: var(--bg);
+  color: var(--text);
   font-family: var(--font-sans);
-  box-sizing: border-box;
 }
 
-/* Apply box sizing globally */
 * {
   box-sizing: border-box;
 }
 
-/* Selection color */
 ::selection {
   background: rgba(201, 169, 110, 0.25);
 }
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* ===== ANIMATION ===== */
 @keyframes scroll-x {
   from {
     transform: translateX(0);
@@ -63,10 +52,7 @@ body {
   animation: scroll-x 20s linear infinite;
 }
 
-/* =========================
-   CUSTOM UTILITIES (FIXED)
-   IMPORTANT: text-muted FIX
-========================= */
+/* ===== CUSTOM UTILITIES ===== */
 @layer utilities {
   .text-muted {
     color: var(--muted);
@@ -89,15 +75,13 @@ body {
   }
 }
 
-/* =========================
-   COMPONENT CLASSES
-========================= */
+/* ===== COMPONENTS ===== */
 .section-eye {
   @apply text-[10px] tracking-[4px] uppercase text-muted font-sans;
 }
 
 .section-h2 {
-  @apply font-serif text-4xl font-light leading-tight text-ivory;
+  @apply font-serif text-4xl font-light leading-tight text-white;
 }
 
 .section-h2 em {
@@ -105,20 +89,14 @@ body {
 }
 
 .btn-primary {
-  @apply bg-transparent border border-white/40 text-white px-6 py-3 text-[11px] tracking-[2px] uppercase font-sans hover:bg-white hover:text-ink transition-all;
+  @apply bg-transparent border border-white/40 text-white px-6 py-3 text-[11px] tracking-[2px] uppercase font-sans hover:bg-white hover:text-black transition-all;
 }
 
 .btn-gold {
-  @apply bg-gold text-ink px-6 py-3 text-[11px] tracking-[2px] uppercase font-sans font-medium hover:bg-gold/90 transition-all;
+  @apply bg-gold text-black px-6 py-3 text-[11px] tracking-[2px] uppercase font-sans font-medium hover:opacity-90 transition-all;
 }
 
-/* =========================
-   HELPERS
-========================= */
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
+/* ===== HELPERS ===== */
 .scrollbar-hidden {
   -ms-overflow-style: none;
   scrollbar-width: none;
