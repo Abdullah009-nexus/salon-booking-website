@@ -1,42 +1,141 @@
+"use client";
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { galleryItems, instagramTiles } from '@/data/gallery';
+import { galleryItems } from '@/data/gallery';
 
 function GalleryCard({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="group relative h-full w-full overflow-hidden rounded-[32px] bg-surface transition duration-500">
-      <Image src={src} alt={alt} width={900} height={900} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
-      <div className="absolute bottom-4 left-4 rounded-full bg-black/70 px-4 py-2 text-xs uppercase tracking-[2px] text-white shadow-lg shadow-black/30">
-        {alt}
+    <div className="group relative w-full h-full overflow-hidden rounded-[24px] md:rounded-[32px] bg-surface border border-white/5 transition-all duration-500 hover:border-gold/30 hover:shadow-[0_20px_50px_rgba(201,169,110,0.15)]">
+      {/* Aspect ratio container */}
+      <div className="relative w-full aspect-[4/5] overflow-hidden">
+        <Image 
+          src={src} 
+          alt={alt} 
+          width={800} 
+          height={1000} 
+          className="h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-105" 
+          priority
+        />
+        {/* Shadow Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-80" />
+      </div>
+      
+      {/* Content */}
+      <div className="absolute bottom-6 left-6 right-6 flex flex-col justify-end transform transition-transform duration-500 group-hover:translate-y-[-4px]">
+        <p className="text-[10px] tracking-[3px] uppercase text-gold/90 font-medium mb-1.5 opacity-90">
+          Signature Look
+        </p>
+        <h3 className="text-lg md:text-xl font-serif text-white tracking-wide leading-tight">
+          {alt}
+        </h3>
       </div>
     </div>
   );
 }
 
 export default function Gallery() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerView, setItemsPerView] = useState(1);
+
+  // Responsive items count
+  useEffect(() => {
+    const updateItemsPerView = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerView(2);
+      } else if (window.innerWidth < 1280) {
+        setItemsPerView(3);
+      } else {
+        setItemsPerView(4);
+      }
+    };
+
+    updateItemsPerView();
+    window.addEventListener('resize', updateItemsPerView);
+    return () => window.removeEventListener('resize', updateItemsPerView);
+  }, []);
+
+  const totalItems = galleryItems.length;
+  const maxIndex = Math.max(0, totalItems - itemsPerView);
+  
+  // Ensure index is always valid
+  const safeIndex = Math.min(currentIndex, maxIndex);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => Math.max(prev - 1, 0));
+  };
+
   return (
-    <section id="gallery" className="bg-ink py-24 text-ivory">
+    <section id="gallery" className="bg-[#090909] py-28 text-ivory relative z-10 border-t border-white/5 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-12 grid gap-6 lg:grid-cols-[1.45fr_0.85fr] lg:items-end">
-          <div>
-            <p className="section-eye">Signature men’s services</p>
-            <h2 className="section-h2">For the Modern Gentleman</h2>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-subtle">
-              A barbering-first house sharp cuts, beard craft and grooming across our gents and unisex studios.
+        {/* Header Grid */}
+        <div className="mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div className="max-w-2xl">
+            <span className="text-[10px] tracking-[4px] uppercase text-gold font-sans font-semibold">
+              Signature men’s services
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl font-light leading-tight text-white mt-3">
+              For the Modern Gentleman
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-subtle max-w-xl">
+              Explore our lookbook. Sharp cuts, master beard grooming, and refined hair design crafted by our senior stylists.
             </p>
           </div>
-          <div className="text-right">
-            <p className="text-sm uppercase tracking-[3px] text-subtle">Premium grooming</p>
-            <p className="mt-3 text-2xl font-semibold text-white">Designed for the refined edit</p>
+
+          {/* Navigation Controls */}
+          <div className="flex items-center gap-3 self-end md:self-auto">
+            <button
+              onClick={prevSlide}
+              disabled={safeIndex === 0}
+              aria-label="Previous image"
+              className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 backdrop-blur-sm ${
+                safeIndex === 0
+                  ? 'border-white/10 text-white/30 cursor-not-allowed'
+                  : 'border-white/20 text-white hover:border-gold hover:text-gold hover:bg-white/5 active:scale-95'
+              }`}
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            <button
+              onClick={nextSlide}
+              disabled={safeIndex === maxIndex}
+              aria-label="Next image"
+              className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 backdrop-blur-sm ${
+                safeIndex === maxIndex
+                  ? 'border-white/10 text-white/30 cursor-not-allowed'
+                  : 'border-white/20 text-white hover:border-gold hover:text-gold hover:bg-white/5 active:scale-95'
+              }`}
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
           </div>
         </div>
 
-        <div className="overflow-x-auto scrollbar-hidden scroll-smooth pb-6 pt-4">
-          <div className="flex gap-5 px-2 sm:px-0 pb-2 pr-4 snap-x snap-mandatory">
+        {/* Slider Window */}
+        <div className="relative overflow-hidden w-full select-none">
+          <div
+            className="flex transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            style={{
+              transform: `translateX(-${safeIndex * (100 / itemsPerView)}%)`,
+            }}
+          >
             {galleryItems.slice(0, 5).map((item) => (
               <div
                 key={item.src}
-                className="snap-start shrink-0 overflow-hidden rounded-[32px] bg-ink/10 shadow-[0_24px_60px_rgba(0,0,0,0.22)] transition-transform duration-300 hover:-translate-y-1 w-[16rem] h-[24rem] sm:w-[18rem] sm:h-[26rem] md:w-[20rem] md:h-[28rem] xl:w-[22rem] xl:h-[30rem]"
+                className="shrink-0 p-3"
+                style={{
+                  width: `${100 / itemsPerView}%`,
+                }}
               >
                 <GalleryCard src={item.src} alt={item.label} />
               </div>
@@ -44,20 +143,80 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="mt-14 rounded-[40px] border border-white/10 bg-surface p-8">
-          <div className="grid gap-4 sm:grid-cols-4">
-            {instagramTiles.map((tile) => (
+        {/* Progress Bar indicator (Apple-style) */}
+        <div className="mt-10 mx-auto max-w-xs bg-white/10 h-[2px] rounded-full overflow-hidden relative">
+          <div 
+            className="bg-gold h-full rounded-full transition-all duration-500 ease-out absolute left-0 top-0"
+            style={{
+              width: `${((safeIndex + 1) / (maxIndex + 1)) * 100}%`,
+            }}
+          />
+        </div>
+
+        {/* Instagram / WA Links */}
+        <div className="mt-20 rounded-[32px] md:rounded-[40px] border border-white/10 bg-[#121212] p-8 md:p-12 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+          {/* Subtle background glow */}
+          <div className="absolute -right-24 -bottom-24 w-96 h-96 bg-gold/5 rounded-full blur-[100px] pointer-events-none" />
+          
+          <div className="relative z-10 grid gap-8 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="text-[10px] tracking-[4px] uppercase text-gold font-sans font-semibold">Connect With Us</p>
+              <h3 className="font-serif text-2xl md:text-3xl text-white mt-2">Book your next visit via WhatsApp</h3>
+              <p className="mt-3 text-sm text-subtle leading-relaxed max-w-md">
+                Select a service type below to chat directly with our front desk and secure your session.
+              </p>
+            </div>
+            
+            <div className="grid gap-3 sm:grid-cols-2">
               <a
-                key={tile.label}
-                href={tile.href}
-                className="rounded-[28px] border border-white/10 bg-ink/80 px-6 py-8 text-center text-sm uppercase tracking-[2px] text-white transition hover:border-gold hover:text-gold"
+                href="https://wa.me/923120847866?text=Hi%20Glamour%20Saloon%20-%20I%20want%20to%20book%20a%20haircut"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-between rounded-[20px] border border-white/10 bg-white/5 px-6 py-4 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold group/link"
               >
-                {tile.label}
+                <span>Haircuts</span>
+                <span className="transform transition-transform duration-300 group-hover/link:translate-x-1">→</span>
               </a>
-            ))}
+              <a
+                href="https://wa.me/923120847866?text=Hi%20Glamour%20Saloon%20-%20I%20want%20to%20book%20a%20beard%20service"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-between rounded-[20px] border border-white/10 bg-white/5 px-6 py-4 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold group/link"
+              >
+                <span>Beard sculpt</span>
+                <span className="transform transition-transform duration-300 group-hover/link:translate-x-1">→</span>
+              </a>
+              <a
+                href="https://wa.me/923120847866?text=Hi%20Glamour%20Saloon%20-%20I%20want%20to%20book%20styling"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-between rounded-[20px] border border-white/10 bg-white/5 px-6 py-4 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold group/link"
+              >
+                <span>Hair Styling</span>
+                <span className="transform transition-transform duration-300 group-hover/link:translate-x-1">→</span>
+              </a>
+              <a
+                href="https://wa.me/923120847866?text=Hi%20Glamour%20Saloon%20-%20I%20want%20to%20book%20a%20facial"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-between rounded-[20px] border border-white/10 bg-white/5 px-6 py-4 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:border-gold hover:bg-gold/10 hover:text-gold group/link"
+              >
+                <span>Facials & Skincare</span>
+                <span className="transform transition-transform duration-300 group-hover/link:translate-x-1">→</span>
+              </a>
+            </div>
           </div>
-          <div className="mt-8 flex flex-wrap gap-4 text-[11px] uppercase tracking-[3px] text-subtle">
-            <span>@glamour_salon_isb</span>
+          
+          <div className="mt-8 pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-[11px] uppercase tracking-[3px] text-subtle relative z-10">
+            <span>Official Instagram: @glamour_salon_isb</span>
+            <a 
+              href="https://www.instagram.com/glamour_salon_isb/?hl=en" 
+              target="_blank" 
+              rel="noreferrer"
+              className="text-gold hover:underline transition-all"
+            >
+              Follow Us
+            </a>
           </div>
         </div>
       </div>
