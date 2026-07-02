@@ -9,12 +9,12 @@ export default function About() {
   return (
     <section className="bg-ink py-24 text-ivory" id="about">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.1fr] lg:items-end">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div>
             <p className="section-eye">The Studio</p>
-            <h2 className="section-h2">A new standard in men's grooming</h2>
+            <h2 className="section-h2">Where premium barbering meets a refined guest experience</h2>
             <p className="mt-6 max-w-xl text-sm leading-7 text-subtle">
-              Glamour brings a new standard in men's grooming to Bahria Town Phase 4. From precision haircuts to keratin treatments and imported facials, every appointment is an individual experience that is calm, considered, and finished to perfection.
+              At Glamour Saloon, every appointment is tailored to your style. We blend precision cuts, luxury beard care, and soothing treatments into a calm, premium atmosphere built for confidence and polish.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               <div className="rounded-[32px] border border-white/10 bg-surface p-6 text-center">

@@ -11,10 +11,10 @@ import { serviceMenu } from '@/data/services';
 export default function BookingCTA() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [service, setService] = useState('Signature Haircut — Rs. 1,500');
+  const [service, setService] = useState('Signature Haircut · Rs. 1,500');
   const [datetime, setDatetime] = useState('');
 
-  const serviceOptions = serviceMenu.flatMap((section) => section.items.map((item) => `${item.name} — ${item.price}`));
+  const serviceOptions = serviceMenu.flatMap((section) => section.items.map((item) => `${item.name} · ${item.price}`));
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -75,7 +75,7 @@ export default function BookingCTA() {
           </div>
 
           <div className="overflow-hidden rounded-[40px] border border-white/10 bg-surface">
-            <img src="/gallery1.jfif" alt="Salon consultation" className="h-full w-full object-cover" />
+            <img src="/curly-style.webp" alt="Salon consultation" className="h-full w-full object-cover" />
           </div>
         </div>
       </div>

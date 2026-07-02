@@ -1,5 +1,5 @@
 export const aboutImages = [
-  { src: '/gallery1.jfif', label: "Men's Hair" },
-  { src: '/gallery2.webp', label: 'Beard Craft' },
-  { src: '/glamour_saloon_icon.jpg', label: 'Styling' },
+  { src: '/hair-cut.jpg', label: 'Hair Design' },
+  { src: '/beard-craft.jpg', label: 'Beard Sculpt' },
+  { src: '/styling.jpg', label: 'Finish Styling' },
 ];

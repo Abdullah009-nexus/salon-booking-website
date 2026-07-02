@@ -15,17 +15,17 @@ export const heroStats = [
   { value: '11 AM – 1 AM', label: 'Open daily' }
 ];
 
-export const heroImage = 'https://images.unsplash.com/photo-1545324416-bd7f2f8f6e2b?auto=format&fit=crop&w=1600&q=80';
+export const heroImage = '/homepage.jpg';
 
 export const whyImages = [
-  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80'
+  '/beard-craft.jpg',
+  '/styling.jpg'
 ];
 
 export const signatureFeatures = [
   {
     title: 'For the Modern Gentleman',
-    description: 'A barbering-first house — sharp cuts, beard craft and grooming across our signature services.',
+    description: 'A barbering-first house with sharp cuts, beard craft and grooming across our signature services.',
     badge: 'Signature services'
   },
   {
@@ -45,37 +45,37 @@ export const serviceCards = [
     title: 'Haircut & Styling',
     price: 'Rs. 700',
     category: 'Hair Services',
-    image: 'https://images.unsplash.com/photo-1545324416-bd7f2f8f6e2b?auto=format&fit=crop&w=1200&q=80'
+    image: '/hair-cut.jpg'
   },
   {
     title: 'Signature Beard Sculpt',
     price: 'Rs. 500',
     category: 'Beard / Grooming',
-    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80'
+    image: '/beard-craft.jpg'
   },
   {
     title: 'Classic Shave',
     price: 'Rs. 500',
     category: 'Beard / Grooming',
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80'
+    image: '/beard.jpg'
   },
   {
     title: 'Facial Glow Treatment',
     price: 'Rs. 2,500',
     category: 'Facial / Skin',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80'
+    image: '/head-cleansing.png'
   },
   {
     title: 'Hair Wash & Finish',
     price: 'Rs. 700',
     category: 'Hair Services',
-    image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=1200&q=80'
+    image: '/styling.jpg'
   },
   {
     title: 'Head Massage',
     price: 'Rs. 1,500',
     category: 'Facial / Skin',
-    image: 'https://images.unsplash.com/photo-1518636828717-96f5c7d1e15a?auto=format&fit=crop&w=1200&q=80'
+    image: '/random.jpg'
   }
 ];
 
@@ -137,24 +137,24 @@ export const servicesData: Record<ServiceTab, Array<{ title: string; items: Arra
 
 export const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Barber studio interior'
+    src: '/studio-view.png',
+    alt: 'Salon interior and service floor'
   },
   {
-    src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Grooming and styling'
+    src: '/barber-cut.webp',
+    alt: 'Haircut and styling service'
   },
   {
-    src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Signature haircut'
+    src: '/beard-grooming.jfif',
+    alt: 'Beard grooming and sculpting'
   },
   {
-    src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Barber finishing touch'
+    src: '/curly-style.webp',
+    alt: 'Styling and finishing'
   },
   {
-    src: 'https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Salon interior luxury'
+    src: '/head-cleansing.png',
+    alt: 'Head cleansing and facial care'
   }
 ];
 

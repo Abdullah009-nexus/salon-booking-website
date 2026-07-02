@@ -60,7 +60,7 @@ export default function ContactSection() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-4 text-[11px] uppercase tracking-[3px] text-subtle">
-                <a href={`https://instagram.com/${salon.instagram}`} target="_blank" rel="noreferrer" className="transition hover:text-white">
+                <a href={`https://www.instagram.com/${salon.instagram}/?hl=en`} target="_blank" rel="noreferrer" className="transition hover:text-white">
                   Instagram
                 </a>
                 <a href={`https://facebook.com/${salon.facebook}`} target="_blank" rel="noreferrer" className="transition hover:text-white">

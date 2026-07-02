@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { buildServiceWhatsAppUrl } from '@/lib/whatsapp';
 
 type ServiceCardProps = {
   title: string;
@@ -21,7 +22,9 @@ export default function ServiceCard({ title, price, category, image }: ServiceCa
         <h3 className="text-xl font-semibold text-ivory">{title}</h3>
         <p className="text-sm text-ivory/70">{price}</p>
         <a
-          href="#contact"
+          href={buildServiceWhatsAppUrl(title)}
+          target="_blank"
+          rel="noreferrer"
           className="inline-flex rounded-full border border-gold/30 bg-gold/10 px-5 py-3 text-sm font-semibold text-gold transition hover:bg-gold hover:text-ink"
         >
           Book Now

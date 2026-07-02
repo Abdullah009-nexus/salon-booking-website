@@ -18,13 +18,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Glamour Saloon — Men\'s Grooming · Bahria Town Phase 4, Rawalpindi',
   description:
-    "Glamour Saloon is Bahria Town Phase 4's destination for precision haircuts, beard craft, keratin treatments and grooming packages — one studio, one exacting standard.",
+    "Glamour Saloon is Bahria Town Phase 4's destination for precision haircuts, beard craft, keratin treatments and grooming packages, one studio, one exacting standard.",
   keywords: ['glamour saloon', 'men salon bahria town rawalpindi', 'haircut bahria town', 'beard trim rawalpindi', 'keratin rawalpindi'],
-  themeColor: '#0c0c0c',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
   openGraph: {
     title: 'Glamour Saloon — Men\'s Grooming · Bahria Town Phase 4',
     description: 'Precision haircuts, beard craft & grooming one exacting standard.',
@@ -33,6 +28,10 @@ export const metadata: Metadata = {
     locale: 'en_PK',
     type: 'website',
   },
+};
+
+export const viewport = {
+  themeColor: '#0c0c0c',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -14,7 +14,7 @@ export default function WhatsAppPanel() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       {open ? (
-        <div className="mb-4 w-[320px] rounded-[32px] border border-white/10 bg-surface p-5 shadow-[0_40px_120px_rgba(0,0,0,0.35)] text-white">
+        <div className="mb-4 w-[320px] rounded-[32px] border border-white/10 bg-[#181818] p-5 shadow-[0_40px_120px_rgba(0,0,0,0.35)] text-white">
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="text-[11px] uppercase tracking-[3px] text-subtle">Glamour Saloon</p>
@@ -25,7 +25,7 @@ export default function WhatsAppPanel() {
               ✕
             </button>
           </div>
-          <a href={panelLink} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#20c659] px-4 py-3 text-[11px] uppercase tracking-[2px] text-ink transition hover:bg-[#1faa4a]">
+          <a href={panelLink} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-white/15 bg-white/15 px-4 py-3 text-[11px] uppercase tracking-[2px] text-white transition hover:bg-white/20">
             Talk to Us
           </a>
         </div>
@@ -33,7 +33,7 @@ export default function WhatsAppPanel() {
       <button
         type="button"
         onClick={() => setOpen((current) => !current)}
-        className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-ink text-[10px] uppercase tracking-[2px] text-white transition hover:border-gold hover:text-gold"
+        className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/15 bg-white/15 text-white text-[10px] uppercase tracking-[2px] shadow-[0_20px_50px_rgba(255,255,255,0.08)] transition hover:bg-white/20"
       >
         Talk to Us
       </button>

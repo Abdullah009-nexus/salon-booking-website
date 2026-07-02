@@ -43,9 +43,9 @@ export const serviceMenu = [
     id: '04',
     category: 'Keratin & Hair Treatments',
     items: [
-      { name: 'Keratin — Top Hair Crown (5 inch)', price: 'Rs. 7,000', desc: 'Targeted keratin for crown area.' },
-      { name: 'Keratin — Medium Length', price: 'Rs. 12,000', desc: 'Smooth, frizz-free medium-length results.' },
-      { name: 'Keratin — Shoulder Length', price: 'Rs. 18,000', desc: 'Full keratin for shoulder-length hair.' },
+      { name: 'Keratin Top Hair Crown (5 inch)', price: 'Rs. 7,000', desc: 'Targeted keratin for crown area.' },
+      { name: 'Keratin Medium Length', price: 'Rs. 12,000', desc: 'Smooth, frizz-free medium-length results.' },
+      { name: 'Keratin Shoulder Length', price: 'Rs. 18,000', desc: 'Full keratin for shoulder-length hair.' },
       { name: 'Hair Rebonding', price: 'Rs. 10,000', desc: 'Permanently straight, silky hair.' },
       { name: 'Protein Treatment', price: 'Rs. 3,000', desc: 'Restore strength, shine and elasticity.' },
       { name: 'Hair Shine & Boost', price: 'Rs. 3,000', desc: 'Add gloss and body to the hair.' },
@@ -55,9 +55,9 @@ export const serviceMenu = [
     id: '05',
     category: 'Hair Perming',
     items: [
-      { name: 'Hair Perming — 5 Inches', price: 'Rs. 10,000', desc: 'Defined curls for short 5-inch hair.' },
-      { name: 'Hair Perming — Medium Length', price: 'Rs. 14,000', desc: 'Natural, bouncy waves.' },
-      { name: 'Hair Perming — Shoulder Length', price: 'Rs. 20,000', desc: 'Lasting curls for shoulder-length hair.' },
+      { name: 'Hair Perming 5 Inches', price: 'Rs. 10,000', desc: 'Defined curls for short 5-inch hair.' },
+      { name: 'Hair Perming Medium Length', price: 'Rs. 14,000', desc: 'Natural, bouncy waves.' },
+      { name: 'Hair Perming Shoulder Length', price: 'Rs. 20,000', desc: 'Lasting curls for shoulder-length hair.' },
     ],
   },
   {

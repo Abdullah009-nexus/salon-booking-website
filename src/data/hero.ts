@@ -1,9 +1,9 @@
 export const heroContent = {
   eyebrow: 'Rawalpindi',
-  subline: "Bahria Town's destination for precision haircuts, beard craft & grooming with one exacting standard.",
-  callout: 'One studio. One exacting standard.',
-  ctaPrimary: 'Book a Consultation →',
-  ctaSecondary: 'Explore Services →',
-  trust: ['8+ Years', 'Certified Barbers', 'Fixed Pricing'],
-  image: '/glamour_saloon_icon.jpg',
+  subline: 'Providing high-quality grooming and beauty services for a polished, confident appearance.',
+  callout: 'Bold looks. Clean finishes.',
+  ctaPrimary: 'Book Your Session →',
+  ctaSecondary: 'View Services →',
+  trust: ['8+ Years', 'Expert Barbers', 'Premium Care'],
+  image: '/homepage.jpg',
 };

@@ -1,7 +1,7 @@
 export const faqs = [
   {
     q: 'Are the listed prices final?',
-    a: 'All prices at Glamour are fixed and clearly displayed. What you see is what you pay — no haggling, no surprise charges.',
+    a: 'All prices at Glamour are fixed and clearly displayed. What you see is what you pay with no haggling and no surprise charges.',
   },
   {
     q: 'Do I need an appointment, or can I walk in?',
@@ -13,7 +13,7 @@ export const faqs = [
   },
   {
     q: 'Do you offer grooming packages?',
-    a: 'Yes — the Glamour Special (Rs. 5,500), Glamour Premium (Rs. 5,000) and the Groom Signature Package (Rs. 20,000) cover multiple services in one visit.',
+    a: 'Yes, the Glamour Special (Rs. 5,500), Glamour Premium (Rs. 5,000) and the Groom Signature Package (Rs. 20,000) cover multiple services in one visit.',
   },
   {
     q: 'Which products do you use?',
@@ -21,6 +21,6 @@ export const faqs = [
   },
   {
     q: 'Where exactly are you located?',
-    a: 'Malik Heights, 82 Plaza, Civic Center, Bahria Town Phase 4, Rawalpindi — near Manjoo Restaurant. Use the map above for directions.',
+    a: 'Malik Heights, 82 Plaza, Civic Center, Bahria Town Phase 4, Rawalpindi, near Manjoo Restaurant. Use the map above for directions.',
   },
 ];

@@ -8,7 +8,7 @@ export default function SignatureServices() {
           <p className="text-sm uppercase tracking-[0.45em] text-gold">For the Modern Gentleman</p>
           <h2 className="mt-4 text-4xl font-semibold text-ink sm:text-5xl">Signature men’s services</h2>
           <p className="mt-6 text-base leading-8 text-ink/75 sm:text-lg">
-            A barbering-first house — sharp cuts, beard craft and grooming across our gents and unisex studios.
+            A barbering-first house with sharp cuts, beard craft and grooming across our gents and unisex studios.
           </p>
         </div>
 
